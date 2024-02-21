@@ -1,0 +1,577 @@
+<!DOCTYPE html> <html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+    <link rel="icon" href="img/favicon.svg">
+    <title>Главная</title>
+</head>
+
+
+<body class="page faq-page2">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+    <div class="header__inner">
+        <div class="header__left">
+            <button class="burger">
+                <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1H19M1 9H19" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <a href="" class="header__logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <button class="header__search">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 16L13 13M1 8C1 8.91925 1.18106 9.82951 1.53284 10.6788C1.88463 11.5281 2.40024 12.2997 3.05025 12.9497C3.70026 13.5998 4.47194 14.1154 5.32122 14.4672C6.1705 14.8189 7.08075 15 8 15C8.91925 15 9.82951 14.8189 10.6788 14.4672C11.5281 14.1154 12.2997 13.5998 12.9497 12.9497C13.5998 12.2997 14.1154 11.5281 14.4672 10.6788C14.8189 9.82951 15 8.91925 15 8C15 7.08075 14.8189 6.1705 14.4672 5.32122C14.1154 4.47194 13.5998 3.70026 12.9497 3.05025C12.2997 2.40024 11.5281 1.88463 10.6788 1.53284C9.82951 1.18106 8.91925 1 8 1C7.08075 1 6.1705 1.18106 5.32122 1.53284C4.47194 1.88463 3.70026 2.40024 3.05025 3.05025C2.40024 3.70026 1.88463 4.47194 1.53284 5.32122C1.18106 6.1705 1 7.08075 1 8Z" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="header-contacts">
+                <a href="" class="header-contacts__social">
+                    <img src="img/tg.svg" alt="">
+                </a>
+                <a href="" class="header-contacts__social">
+                    <img src="img/whatsapp.svg" alt="">
+                </a>
+                <div class="header-contacts__phone">
+                    <a href="tel:+74952555476" class="header-contacts__phone-link">
+                        <span>+7 (495) 255 54 76</span>
+                    </a>
+                    <button class="header-contacts__phone-btn _call-me">
+                        <span>Перезвоните мне</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-action">
+            <button class="header-action__login header-action__btn m-btn m-btn-small m-btn-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                    <path d="M6.79412 4.5V2.75C6.79412 2.28587 6.98004 1.84075 7.31099 1.51256C7.64193 1.18437 8.09079 1 8.55882 1H14.7353C15.2033 1 15.6522 1.18437 15.9831 1.51256C16.3141 1.84075 16.5 2.28587 16.5 2.75V13.25C16.5 13.7141 16.3141 14.1592 15.9831 14.4874C15.6522 14.8156 15.2033 15 14.7353 15H8.55882C8.09079 15 7.64193 14.8156 7.31099 14.4874C6.98004 14.1592 6.79412 13.7141 6.79412 13.25V11.5M1.5 8H12.9706M12.9706 8L10.3235 5.375M12.9706 8L10.3235 10.625" stroke="#3F485F" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+                <span>Войти</span>
+            </button>
+            <button class="header-action__reg header-action__btn m-btn m-btn-small m-btn-black">
+                <span>Регистрация</span>
+            </button>
+            <div class="lang">
+    <div class="lang__show">
+        <i class="lang__icon">
+            <img src="img/world.svg" alt="">
+        </i>
+        <span class="lang__title text13">RU</span>
+        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z" fill="#919198"/>
+        </svg>
+    </div>
+    <div class="lang__hidden">
+        <div class="lang__inner">
+            <a href="" class="lang__link _active">
+                <span>RU</span>
+            </a>
+            <a href="" class="lang__link">
+                <span>ENG</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="menu">
+    <div class="menu-top">
+        <div class="container">
+            <div class="menu-top__inner">
+                <button class="menu__close _close-btn">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 2L2 11M2 2L11 11" stroke="#E2E4EE" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <a href="" class="menu__logo">
+                    <img src="img/logo2.svg" alt="">
+                </a>
+
+                <fieldset class="search-field">
+                    <input type="text" placeholder="Поиск по сайту...">
+                    <button class="search-field__btn">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 16L13 13M1 8C1 8.91925 1.18106 9.82951 1.53284 10.6788C1.88463 11.5281 2.40024 12.2997 3.05025 12.9497C3.70026 13.5998 4.47194 14.1154 5.32122 14.4672C6.1705 14.8189 7.08075 15 8 15C8.91925 15 9.82951 14.8189 10.6788 14.4672C11.5281 14.1154 12.2997 13.5998 12.9497 12.9497C13.5998 12.2997 14.1154 11.5281 14.4672 10.6788C14.8189 9.82951 15 8.91925 15 8C15 7.08075 14.8189 6.1705 14.4672 5.32122C14.1154 4.47194 13.5998 3.70026 12.9497 3.05025C12.2997 2.40024 11.5281 1.88463 10.6788 1.53284C9.82951 1.18106 8.91925 1 8 1C7.08075 1 6.1705 1.18106 5.32122 1.53284C4.47194 1.88463 3.70026 2.40024 3.05025 3.05025C2.40024 3.70026 1.88463 4.47194 1.53284 5.32122C1.18106 6.1705 1 7.08075 1 8Z" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </fieldset>
+
+                <div class="header-action">
+                    <button class="header-action__login header-action__btn m-btn m-btn-small m-btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                            <path d="M6.79412 4.5V2.75C6.79412 2.28587 6.98004 1.84075 7.31099 1.51256C7.64193 1.18437 8.09079 1 8.55882 1H14.7353C15.2033 1 15.6522 1.18437 15.9831 1.51256C16.3141 1.84075 16.5 2.28587 16.5 2.75V13.25C16.5 13.7141 16.3141 14.1592 15.9831 14.4874C15.6522 14.8156 15.2033 15 14.7353 15H8.55882C8.09079 15 7.64193 14.8156 7.31099 14.4874C6.98004 14.1592 6.79412 13.7141 6.79412 13.25V11.5M1.5 8H12.9706M12.9706 8L10.3235 5.375M12.9706 8L10.3235 10.625" stroke="#3F485F" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Войти</span>
+                    </button>
+                    <button class="header-action__reg header-action__btn m-btn m-btn-small m-btn-black">
+                        <span>Регистрация</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-content">
+        <div class="container">
+            <div class="menu-content__inner">
+                <div class="menu__links">
+                    <a href="" class="menu__link">
+                        <span>Главная</span>
+                    </a>
+                    <a href="" class="menu__link">
+                        <span>Наш Блог</span>
+                    </a>
+                    <a href="" class="menu__link _active">
+                        <span>Справка</span>
+                    </a>
+                    <a href="" class="menu__link">
+                        <span>Продукт</span>
+                    </a>
+                    <a href="" class="menu__link">
+                        <span>Партнерам</span>
+                    </a>
+                    <a href="" class="menu__link">
+                        <span>О компании</span>
+                    </a>
+                </div>
+                <div class="menu__right">
+                    <div class="header-contacts">
+                        <a href="" class="header-contacts__social">
+                            <img src="img/tg.svg" alt="">
+                        </a>
+                        <a href="" class="header-contacts__social">
+                            <img src="img/whatsapp.svg" alt="">
+                        </a>
+                        <div class="header-contacts__phone">
+                            <a href="tel:+74952555476" class="header-contacts__phone-link">
+                                <span>+7 (495) 255 54 76</span>
+                            </a>
+                            <button class="header-contacts__phone-btn _call-me">
+                                <span>Перезвоните мне</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu__c">
+                        © All Rights Reserved. 2022. <br> Все права защищены
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="call-modal">
+    <button class="call-modal__close _close-btn">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 2L2 11M2 2L11 11" stroke="#E2E4EE" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <div class="call-modal__inner">
+        <div class="display2">
+            Перезвоним вам <br>
+            <span class="blue-text">в течении 15 минут</span>
+        </div>
+        <form action="" class="call-modal__form">
+            <fieldset class="fg">
+                <input type="email">
+                <label>Ваш email</label>
+            </fieldset>
+            <fieldset class="fg">
+                <input type="tel">
+                <label>Номер телефона</label>
+            </fieldset>
+            <button class="m-btn m-btn-primary">
+                <span>Перезвоните мне</span>
+            </button>
+            <div class="call-modal__hint">
+                <div class="call-modal__hint-icon">
+                    <img src="img/shiels.svg" alt="">
+                </div>
+                <span class="text12">
+                    Нажимая кнопку “Перезвоните мне” я соглашаюсь с обработакой персональных данных в соответсвии с Политикой конфиденциальности
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+        </header>
+        <main class="content">
+
+            <section class="about-main faq-main _first-section bg-cover">
+                <div class="container">
+    <div class="about-main__inner">
+        <div class="about-main__left">
+            <div class="about-main__info">
+                <h1 class="display2">
+<!--                    Наше призвание - -->
+                    <span class="blue-text">
+                        Инструкции <span class="black-text">и</span> FAQ
+                    </span>
+                </h1>
+                <div class="about-main__text text14">
+                    <p>
+                        Как выполнить типичные операции в LightDoc и ответы на часто задаваемые вопросы
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="about-main__right">
+            <fieldset class="search-field">
+                <input type="text" placeholder="Поиск по сайту...">
+                <button class="search-field__btn">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 16L13 13M1 8C1 8.91925 1.18106 9.82951 1.53284 10.6788C1.88463 11.5281 2.40024 12.2997 3.05025 12.9497C3.70026 13.5998 4.47194 14.1154 5.32122 14.4672C6.1705 14.8189 7.08075 15 8 15C8.91925 15 9.82951 14.8189 10.6788 14.4672C11.5281 14.1154 12.2997 13.5998 12.9497 12.9497C13.5998 12.2997 14.1154 11.5281 14.4672 10.6788C14.8189 9.82951 15 8.91925 15 8C15 7.08075 14.8189 6.1705 14.4672 5.32122C14.1154 4.47194 13.5998 3.70026 12.9497 3.05025C12.2997 2.40024 11.5281 1.88463 10.6788 1.53284C9.82951 1.18106 8.91925 1 8 1C7.08075 1 6.1705 1.18106 5.32122 1.53284C4.47194 1.88463 3.70026 2.40024 3.05025 3.05025C2.40024 3.70026 1.88463 4.47194 1.53284 5.32122C1.18106 6.1705 1 7.08075 1 8Z" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+            </section>
+
+            <section class="answers tabs-parent">
+                <div class="container">
+                    <div class="answers__grid">
+                        <div class="answers__col">
+                            <div class="answers__tabs">
+                                <div class="tab _active" data-tab="tab1">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 24C0 24.5523 0.447715 25 1 25C1.55228 25 2 24.5523 2 24H0ZM9.86864 17.1059C10.4209 17.1059 10.8686 16.6582 10.8686 16.1059C10.8686 15.5536 10.4209 15.1059 9.86864 15.1059V17.1059ZM20.8305 13.4768C21.2354 13.1012 21.2592 12.4685 20.8836 12.0636C20.508 11.6587 19.8753 11.6349 19.4704 12.0105L20.8305 13.4768ZM18.7122 17.0078C19.1027 17.3984 19.7358 17.3986 20.1264 17.0081C20.517 16.6177 20.5172 15.9845 20.1268 15.5939L18.7122 17.0078ZM24.6723 17.6259C25.0811 17.2546 25.1116 16.6222 24.7403 16.2133C24.369 15.8045 23.7366 15.774 23.3277 16.1453L24.6723 17.6259ZM21.911 18.7827L21.2388 18.0424C21.0468 18.2167 20.93 18.4588 20.9132 18.7176L21.911 18.7827ZM20.0741 23.1716L19.8566 24.1477C20.1942 24.2229 20.5467 24.1183 20.7887 23.8711L20.0741 23.1716ZM12.5487 24L11.6309 23.603C11.4706 23.9736 11.5489 24.4043 11.8295 24.6947C12.11 24.9852 12.5377 25.0784 12.9137 24.931L12.5487 24ZM13.4746 16.5334L12.8653 15.7404C12.527 16.0004 12.3909 16.4463 12.5263 16.8509L13.4746 16.5334ZM2 24C2 20.1925 5.08659 17.1059 8.89407 17.1059V15.1059C3.98202 15.1059 0 19.0879 0 24H2ZM8.89407 17.1059H9.86864V15.1059H8.89407V17.1059ZM14.1314 6.60381C14.1314 9.14644 12.0702 11.2076 9.52754 11.2076V13.2076C13.1747 13.2076 16.1314 10.251 16.1314 6.60381H14.1314ZM9.52754 11.2076C6.98491 11.2076 4.92373 9.14644 4.92373 6.60381H2.92373C2.92373 10.251 5.88034 13.2076 9.52754 13.2076V11.2076ZM4.92373 6.60381C4.92373 4.06118 6.98491 2 9.52754 2V0C5.88034 0 2.92373 2.95662 2.92373 6.60381H4.92373ZM9.52754 2C12.0702 2 14.1314 4.06118 14.1314 6.60381H16.1314C16.1314 2.95662 13.1747 0 9.52754 0V2ZM15.1547 19.3708C15.1547 20.5958 16.1478 21.589 17.3729 21.589V19.589C17.2524 19.589 17.1547 19.4913 17.1547 19.3708H15.1547ZM17.3729 21.589C18.598 21.589 19.5911 20.5958 19.5911 19.3708H17.5911C17.5911 19.4913 17.4934 19.589 17.3729 19.589V21.589ZM19.5911 19.3708C19.5911 18.1457 18.598 17.1525 17.3729 17.1525V19.1525C17.4934 19.1525 17.5911 19.2502 17.5911 19.3708H19.5911ZM17.3729 17.1525C16.1478 17.1525 15.1547 18.1457 15.1547 19.3708H17.1547C17.1547 19.2502 17.2524 19.1525 17.3729 19.1525V17.1525ZM19.4704 12.0105L17.2461 14.0737L18.6062 15.54L20.8305 13.4768L19.4704 12.0105ZM17.2189 15.5138L18.7122 17.0078L20.1268 15.5939L18.6334 14.0999L17.2189 15.5138ZM23.3277 16.1453L21.2388 18.0424L22.5833 19.5229L24.6723 17.6259L23.3277 16.1453ZM20.9132 18.7176C20.825 20.0702 20.3897 21.4198 19.3595 22.4721L20.7887 23.8711C22.2437 22.3848 22.7992 20.5303 22.9089 18.8477L20.9132 18.7176ZM20.2917 22.1956C17.8213 21.6449 15.0553 21.9433 12.1838 23.069L12.9137 24.931C15.4966 23.9185 17.8528 23.701 19.8566 24.1477L20.2917 22.1956ZM13.4665 24.397C14.654 21.6519 15.291 18.8093 14.4229 16.216L12.5263 16.8509C13.1587 18.74 12.7518 21.0118 11.6309 23.603L13.4665 24.397ZM14.0838 17.3264C15.447 16.2791 16.4631 16.0614 18.0887 15.7935L17.7636 13.8201C16.0412 14.1039 14.6265 14.3873 12.8653 15.7404L14.0838 17.3264Z" fill="#504EF3"/>
+                                    </svg>
+                                    <span>Отправителю документа</span>
+                                </div>
+                                <div class="tab" data-tab="tab2">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 3.5339H3.5339C2.13446 3.5339 1 2.39945 1 1V16.3983C1 17.7977 2.13446 18.9322 3.5339 18.9322H21.4661C22.8655 18.9322 24 20.0667 24 21.4661C24 22.8655 22.8655 24 21.4661 24C20.7974 24 20.1892 23.741 19.7364 23.3178M24 21.3199V10.2097M6.84746 14.8877H16.0085M6.84746 11.2331H10.1123M23.2436 1.75644C22.235 0.747853 20.5997 0.747853 19.5912 1.75644L16.6134 4.73421C15.7653 5.58224 15.1874 6.66236 14.9524 7.83843L14.4004 10.5996L17.1616 10.0477C18.3376 9.81263 19.4177 9.23461 20.2658 8.38658L23.2436 5.40881C24.2521 4.40022 24.2521 2.76503 23.2436 1.75644Z" stroke="#504EF3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Подписанту документа</span>
+                                </div>
+                                <div class="tab" data-tab="tab3">
+                                    <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24 14.4078C24 16.0176 22.691 17.3226 21.0763 17.3226H3.92373C2.309 17.3226 1 16.0176 1 14.4078V3.91475C1 2.30498 2.309 1 3.92373 1H21.0763C22.691 1 24 2.30498 24 3.91475V9.55585M1.48729 5.66953H23.1716M4.8983 9.55585H12.9386M20.1017 14.4138H17.8602C17.3219 14.4138 16.8856 13.9788 16.8856 13.4422V12.2763C16.8856 11.7397 17.3219 11.3047 17.8602 11.3047H20.1017C20.64 11.3047 21.0763 11.7397 21.0763 12.2763V13.4422C21.0763 13.9788 20.64 14.4138 20.1017 14.4138Z" stroke="#504EF3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>
+                                        Оплата тарифа банковской картой
+                                    </span>
+                                </div>
+                                <div class="tab" data-tab="tab4">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.38136 3.5339H3.5339C2.13446 3.5339 1 2.39944 1 1V16.3983C1 17.7977 2.13446 18.9322 3.5339 18.9322H21.4661C22.8655 18.9322 24 20.0667 24 21.4661C24 22.8655 22.8655 24 21.4661 24C20.7974 24 20.1892 23.741 19.7364 23.3178M24 21.3199V14.7903M6.84746 14.8877H13.0847M6.84746 11.233H9.13771M20.1017 6.16525L18.4269 7.08462L16.7394 6.16525M18.4936 7.08996V8.94278M12.8898 4.72509V9.48667C12.8898 10.1644 13.268 10.7853 13.8697 11.0956L17.6021 13.0301C18.1199 13.2971 18.7344 13.2979 19.2529 13.0323L23.0159 11.0945C23.62 10.7851 24 10.1629 24 9.48341V4.72831C24 4.04761 23.6185 3.42447 23.0127 3.11558L19.2497 1.19703C18.733 0.93355 18.1213 0.934378 17.6053 1.19922L13.8729 3.11446C13.2694 3.42418 12.8898 4.046 12.8898 4.72509Z" stroke="#504EF3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Регистрация своей компании и оплата</span>
+                                </div>
+                                <div class="tab" data-tab="tab5">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.1271 20.2966L21.0763 22.2458L24 19.322M16.8658 23.1579C15.5168 23.701 14.0433 24 12.5 24C6.04109 24 1 18.9589 1 12.5C1 6.04109 6.04109 1 12.5 1C18.9589 1 24 6.04109 24 12.5C24 13.4049 23.8972 14.2858 23.7027 15.1316M16.3983 16.3983L12.5 12.5V8.60169" stroke="#504EF3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Тарифы и сроки использования</span>
+                                </div>
+                                <div class="tab" data-tab="tab6">
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.1042 18.5468H1.89578V3.89428C1.89578 2.29582 3.20478 1 4.81951 1H20.1805C21.7952 1 23.1042 2.29582 23.1042 3.89428V13.7134M8.68263 14.4742C10.7909 12.3872 14.2091 12.3872 16.3174 14.4742M21.0763 22.5625H3.92373C2.309 22.5625 1 21.2667 1 19.6682V18.5468H24V19.6682C24 21.2667 22.691 22.5625 21.0763 22.5625ZM15.9884 9.45569C15.9884 11.3629 14.4266 12.909 12.5 12.909C10.5734 12.909 9.0116 11.3629 9.0116 9.45569C9.0116 7.54851 10.5734 6.00243 12.5 6.00243C14.4266 6.00243 15.9884 7.54851 15.9884 9.45569Z" stroke="#504EF3" stroke-width="1.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Установка Крипто Про browser-plugin</span>
+                                </div>
+                                <div class="tab" data-tab="tab7">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.53318 15.6514L7.86252 9.43739C7.9101 9.31919 8.07482 9.319 8.12268 9.43715L10.4308 15.6514M6.25961 14.1038H9.7161M18.6079 9.34862V15.6514M12.7481 9.34862V15.6514M12.7481 9.34862C12.7481 9.34862 12.7524 10.7206 12.7524 11.1273C12.7524 11.6224 12.7601 12.9137 12.7601 12.9137C12.7601 12.9137 13.9959 12.9059 14.4753 12.9059C15.4421 12.9059 16.2602 12.1096 16.2602 11.1273C16.2602 10.1449 15.4421 9.34862 14.4753 9.34862H12.7481ZM9.10435 24H15.8956V21.6368C16.8823 21.2579 17.7957 20.7281 18.5969 20.0602L20.6044 21.2378L24 15.2622L21.984 14.0796C22.0666 13.5642 22.1208 13.0391 22.1208 12.5C22.1208 11.9608 22.0666 11.4358 21.984 10.9204L24 9.73778L20.6044 3.7622L18.5969 4.93975C17.7957 4.2719 16.8823 3.74203 15.8956 3.36324V1H9.10435V3.36324C8.11764 3.74203 7.20427 4.2719 6.403 4.93975L4.39555 3.7622L1 9.73778L3.01589 10.9204C2.93329 11.4358 2.87913 11.9608 2.87913 12.5C2.87913 13.0391 2.93329 13.5642 3.01589 14.0796L1 15.2622L4.39555 21.2378L6.403 20.0602C7.20427 20.7281 8.11764 21.2579 9.10435 21.6368V24Z" stroke="#504EF3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>API LIghtDoc</span>
+                                </div>
+                                <div class="tab" data-tab="tab8">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.6984 19.6507H21.0763C22.691 19.6507 24 18.3417 24 16.727V16.6833M6.75171 16.6833L5.62753 15.8193C4.91697 15.2731 4.91697 14.2019 5.62753 13.6557L6.75171 12.7916M13.899 12.7917L15.0232 13.6557C15.7337 14.2019 15.7337 15.2732 15.0232 15.8193L13.899 16.6834M10.7299 12.7917L9.92078 16.6833M24 11.8104V3.92373C24 2.309 22.691 1 21.0763 1H8.27302C6.65829 1 5.34929 2.309 5.34929 3.92373V5.28502M16.727 24H3.92373C2.309 24 1 22.691 1 21.0763V8.27302C1 6.65829 2.309 5.34929 3.92373 5.34929H16.727C18.3417 5.34929 19.6507 6.65829 19.6507 8.27302V21.0763C19.6507 22.691 18.3417 24 16.727 24Z" stroke="#504EF3" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Расширение LightDoc для 1С</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="answers__col">
+                            <div class="tab-content _active tab1">
+                                <div class="text">
+                                    <h2>Подписанту документа</h2>
+                                    <ol>
+                                        <li>В сообщении, пришедшем на Вашу электронную почту, содержится ссылка на документ к подписанию, нажмите на нее и перейдите на страницу регистрации LightDoc.</li>
+                                        <li>При регистрации обязательно задать <b>Электронную почту</b> (является основным идентификатором), <b>ФИО, телефон и пароль</b>, который нужно повторить для исключения ошибки.</li>
+                                        <li>После окончания регистрации необходимо подтвердить электронную почту, пройдя по ссылке в сообщении на email.</li>
+                                    </ol>
+
+                                    <p>Ознакомьтесь с содержанием документа и при согласии нажмите кнопку  <mark> «Подтвердить»</mark></p>
+                                    <p>При несогласии выберите   <mark>«Отклонить»</mark>   нажав на точки рядом с кнопкой подтверждения.</p>
+                                    <p>Если отправитель документа потребовал строгую верификацию личности подписанта, то перед подписанием потребуется пройти процедуру верификации</p>
+                                    <p>При первичном подписании УНЭП, для подтверждения действия Вам на электронную почту придет 6-значный код подтверждения, введите его в окно подтверждения.</p>
+                                    <p>Документ подписан и будет автоматически доступен отправителю.</p>
+                                    <p>Вы всегда сможете войти в личный кабинет пользователя сервиса LightDoc и увидеть все подписанные Вами документы. Для этого в главном меню выберите пункт «Документы»</p>
+                                    <p>В случае если на главной странице меню в счетчике    <mark>«Входящие документы»</mark>   есть, а на странице <b>“Документы”</b> они отсутствуют то необходимо нажать на кнопку   <mark>«Фильтры»</mark>   и .. <mark>«Сбросить»</mark></p>
+                                    <p>Если вы забыли пароль от личного кабинета, то при входе пройдите процедуру .. <mark>«Восстановление пароля»</mark></p>
+                                </div>
+
+                                <div class="screens slider">
+                                    <div class="screens__top">
+                                        <div class="screens__title">
+                                            Скриншоты:
+                                        </div>
+                                        <div class="swiper-nav">
+    <div class="swiper-button swiper-button-prev">
+        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.6967C5.53553 0.403806 6.01041 0.403806 6.3033 0.6967C6.59619 0.989593 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM14 6.75L1 6.75L1 5.25L14 5.25L14 6.75Z" fill="#191021"/>
+        </svg>
+    </div>
+    <div class="swiper-button swiper-button-next">
+        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5303 6.53033C13.8232 6.23744 13.8232 5.76256 13.5303 5.46967L8.75736 0.6967C8.46447 0.403806 7.98959 0.403806 7.6967 0.6967C7.40381 0.989593 7.40381 1.46447 7.6967 1.75736L11.9393 6L7.6967 10.2426C7.40381 10.5355 7.40381 11.0104 7.6967 11.3033C7.98959 11.5962 8.46447 11.5962 8.75736 11.3033L13.5303 6.53033ZM-6.55671e-08 6.75L13 6.75L13 5.25L6.55671e-08 5.25L-6.55671e-08 6.75Z" fill="#191021"/>
+        </svg>
+    </div>
+</div>
+
+                                    </div>
+                                    <div class="screens__slider">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="img/screen.webp" data-fancybox="screens" class="screen-img">
+                                                        <img src="img/screen.webp" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="img/screen2.webp" data-fancybox="screens" class="screen-img">
+                                                        <img src="img/screen2.webp" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="img/screen3.webp" data-fancybox="screens" class="screen-img">
+                                                        <img src="img/screen3.webp" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content tab2">
+                                2
+                            </div>
+                            <div class="tab-content tab3">
+                                3
+                            </div>
+                            <div class="tab-content tab4">
+                                4
+                            </div>
+                            <div class="tab-content tab5">
+                                5
+                            </div>
+                            <div class="tab-content tab6">
+                                6
+                            </div>
+                            <div class="tab-content tab7">
+                                7
+                            </div>
+                            <div class="tab-content tab8">
+                                8
+                            </div>
+                            <div class="problems">
+                                <div class="screens__title">Частые проблемы и способы решения:</div>
+                                <div class="problems__links">
+                                    <a href="" class="problems__link">
+                                        Почему не приходит код подтверждения?
+                                    </a>
+                                    <a href="" class="problems__link">
+                                        Почему не вижу документ после перехода по ссылке из письма?
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq bg-cover">
+                <div class="container">
+    <h2 class="faq__title display3">
+        <span class="blue-text">FAQ</span> - Часто
+        задаваемые вопросы
+    </h2>
+    <div class="faq__items">
+        <div class="qa-card">
+    <div class="qa-card__show">
+        <div class="qa-card__title text16">
+            Как связаться с технической поддержкой?
+        </div>
+        <button class="qa-card__btn">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.30435 0H8.69565V17H7.30435V0Z" fill="#504EF3"/>
+                <path d="M16 7.76087V9.23913H0L6.08159e-08 7.76087L16 7.76087Z" fill="#504EF3"/>
+            </svg>
+        </button>
+    </div>
+    <div class="qa-card__hidden">
+        <div class="qa-card__text text15">
+            <p>В том случае если Вам не приходит код подтверждения на email, проверьте папку <b>«Спам»</b> .</p>
+            <p>Так же возможно Ваш почтовый клиент на телефоне(или другом устройстве) не достаточно быстро получает информацию о новых письмах. Воспользуйтесь средствами форсированного получения обновлений (кнопка обновить, потянуть список вниз) или войдите в почтовый ящик через браузер.</p>
+        </div>
+    </div>
+</div>
+
+        <div class="qa-card">
+    <div class="qa-card__show">
+        <div class="qa-card__title text16">
+            Нет доступа к документу при переходе по ссылке из почты?
+        </div>
+        <button class="qa-card__btn">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.30435 0H8.69565V17H7.30435V0Z" fill="#504EF3"/>
+                <path d="M16 7.76087V9.23913H0L6.08159e-08 7.76087L16 7.76087Z" fill="#504EF3"/>
+            </svg>
+        </button>
+    </div>
+    <div class="qa-card__hidden">
+        <div class="qa-card__text text15">
+            <p>В том случае если Вам не приходит код подтверждения на email, проверьте папку <b>«Спам»</b> .</p>
+            <p>Так же возможно Ваш почтовый клиент на телефоне(или другом устройстве) не достаточно быстро получает информацию о новых письмах. Воспользуйтесь средствами форсированного получения обновлений (кнопка обновить, потянуть список вниз) или войдите в почтовый ящик через браузер.</p>
+        </div>
+    </div>
+</div>
+
+        <div class="qa-card">
+    <div class="qa-card__show">
+        <div class="qa-card__title text16">
+            Почему не приходит код подтверждения на мой Email?
+        </div>
+        <button class="qa-card__btn">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.30435 0H8.69565V17H7.30435V0Z" fill="#504EF3"/>
+                <path d="M16 7.76087V9.23913H0L6.08159e-08 7.76087L16 7.76087Z" fill="#504EF3"/>
+            </svg>
+        </button>
+    </div>
+    <div class="qa-card__hidden">
+        <div class="qa-card__text text15">
+            <p>В том случае если Вам не приходит код подтверждения на email, проверьте папку <b>«Спам»</b> .</p>
+            <p>Так же возможно Ваш почтовый клиент на телефоне(или другом устройстве) не достаточно быстро получает информацию о новых письмах. Воспользуйтесь средствами форсированного получения обновлений (кнопка обновить, потянуть список вниз) или войдите в почтовый ящик через браузер.</p>
+        </div>
+    </div>
+</div>
+
+        <div class="qa-card">
+    <div class="qa-card__show">
+        <div class="qa-card__title text16">
+            Какова стоимость использования LightDoc?
+        </div>
+        <button class="qa-card__btn">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.30435 0H8.69565V17H7.30435V0Z" fill="#504EF3"/>
+                <path d="M16 7.76087V9.23913H0L6.08159e-08 7.76087L16 7.76087Z" fill="#504EF3"/>
+            </svg>
+        </button>
+    </div>
+    <div class="qa-card__hidden">
+        <div class="qa-card__text text15">
+            <p>В том случае если Вам не приходит код подтверждения на email, проверьте папку <b>«Спам»</b> .</p>
+            <p>Так же возможно Ваш почтовый клиент на телефоне(или другом устройстве) не достаточно быстро получает информацию о новых письмах. Воспользуйтесь средствами форсированного получения обновлений (кнопка обновить, потянуть список вниз) или войдите в почтовый ящик через браузер.</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="footer-menu">
+    <div class="container">
+        <div class="footer-menu__inner">
+            <a href="" class="footer-menu__logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+
+            <nav class="footer-nav">
+                <a href="" class="footer-nav__link">
+                    <span>Продукт</span>
+                </a>
+                <a href="" class="footer-nav__link">
+                    <span>Решения</span>
+                </a>
+                <a href="" class="footer-nav__link">
+                    <span>Тарифы</span>
+                </a>
+                <a href="" class="footer-nav__link">
+                    <span>Блог</span>
+                </a>
+                <a href="" class="footer-nav__link">
+                    <span>Справка</span>
+                </a>
+                <a href="" class="footer-nav__link">
+                    <span>О компании</span>
+                </a>
+            </nav>
+
+            <div class="footer-apps">
+                <a href="" class="footer-apps__link">
+                    <img src="img/app.svg" alt="">
+                </a>
+                <a href="" class="footer-apps__link">
+                    <img src="img/app2.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <div class="container">
+        <div class="footer-bottom__inner">
+            <div class="footer__c">
+                © All Rights Reserved. 2023. Все права защищены
+            </div>
+            <a href="" class="footer__by">
+                Разработка сайта от TutMee.ru
+            </a>
+            <div class="footer__links">
+                <a href="" class="footer__link">Политика конфиденциальности</a>
+                <a href="" class="footer__link">Лицензионное соглашение</a>
+            </div>
+
+            <div class="lang">
+                <div class="lang__show">
+                    <img src="img/world.svg" alt="">
+                    <span>Русский</span>
+                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z" fill="#919198"/>
+                    </svg>
+                </div>
+                <div class="lang__dropdown">
+                    <a href="" class="lang__item _active">Русский</a>
+                    <a href="" class="lang__item">English</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </footer>
+    </div>
+
+    <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
